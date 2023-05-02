@@ -110,37 +110,37 @@
                     <finalName>locale-api-${project.version}</finalName>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadoc</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <show>private</show>
-                    <tags>
-                        <tag>
-                            <name>apiNote</name>
-                            <placement>a</placement>
-                            <head>API Note:</head>
-                        </tag>
-                    </tags>
-                    <finalName>locale-api-${project.version}</finalName>
-                    <doctitle>Locale-API</doctitle>
-                    <links>
-                        <link>https://guava.dev/releases/31.0-jre/api/docs/</link>
-                        <link>https://helpch.at/docs/1.19/</link>
-                        <link>https://javadoc.io/doc/org.jetbrains/annotations/23.0.0/org/jetbrains/annotations/package-summary.html</link>
-                    </links>
-                    <reportOutputDirectory>${project.basedir}</reportOutputDirectory>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                <version>3.2.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>attach-javadoc</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <show>private</show>-->
+<!--                    <tags>-->
+<!--                        <tag>-->
+<!--                            <name>apiNote</name>-->
+<!--                            <placement>a</placement>-->
+<!--                            <head>API Note:</head>-->
+<!--                        </tag>-->
+<!--                    </tags>-->
+<!--                    <finalName>locale-api-${project.version}</finalName>-->
+<!--                    <doctitle>Locale-API</doctitle>-->
+<!--                    <links>-->
+<!--                        <link>https://guava.dev/releases/31.0-jre/api/docs/</link>-->
+<!--                        <link>https://helpch.at/docs/1.19/</link>-->
+<!--                        <link>https://javadoc.io/doc/org.jetbrains/annotations/23.0.0/org/jetbrains/annotations/package-summary.html</link>-->
+<!--                    </links>-->
+<!--                    <reportOutputDirectory>${project.basedir}</reportOutputDirectory>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
         <resources>
             <resource>

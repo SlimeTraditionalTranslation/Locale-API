@@ -60,13 +60,18 @@ class LocaleReader {
      * @param locale The locale used
      */
     LocaleReader(@NotNull Locale locale) {
-        this.locale = locale;
-        String fileName = locale.name() + ".json";
-        InputStream inputStream = getFileFromResourceAsStream( "lang/" + fileName);
+        String lang = locale.name();
+        if (!lang.equals("zh_tw") && !lang.equals("zh_cn")) {
+            lang = "en_us";
+            this.locale = Locale.en_us;
+        } else {
+            this.locale = locale;
+        }
+        String fileName = lang + ".json";
+        InputStream inputStream = getFileFromResourceAsStream("lang/" + fileName);
         InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         BufferedReader reader = new BufferedReader(streamReader);
         Gson gson = new Gson();
-
         this.json = gson.fromJson(reader, JsonObject.class);
     }
 
